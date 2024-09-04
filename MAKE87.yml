@@ -2,6 +2,6 @@ build_kit:
   name: python3
   version: latest
 topics:
-  - name: HELLO_WORLD_MESSAGE
-    message_type: make87.text.PlainText.PlainText
+  - name: SCREEN_CAPTURE
+    message_type: make87.image.ImageJPEG.ImageJPEG
     type: PUB
