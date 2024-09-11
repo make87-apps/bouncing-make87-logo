@@ -1,7 +1,6 @@
 build_kit:
   name: python3
   version: latest
-topics:
+outbound_topics:
   - name: SCREEN_CAPTURE
     message_type: make87.image.ImageJPEG.ImageJPEG
-    type: PUB
