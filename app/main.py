@@ -1,3 +1,4 @@
+import logging
 import os
 import random
 
@@ -20,7 +21,7 @@ def main():
 
         message = ImageJPEG(data=jpeg.tobytes())
         topic.publish(message)
-        print(f"Published logo frame with size {len(jpeg)} bytes")
+        logging.info(f"Published logo frame with size {len(jpeg)} bytes")
 
     # Initialize Pygame
     pygame.init()
