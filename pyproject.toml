@@ -13,7 +13,7 @@ dependencies = [
     "make87_messages",
     "pygame>=2.6.0",
     "numpy>=1.26.4",
-    "opencv-python>=4.10",
+    "opencv-python-headless>=4.10",
 ]
 description = "A Python app using Pygame to recreate the classic bouncing DVD logo, now with make87’s name. The logo bounces around the screen, changing color when it hits the edges."
 readme = "README.md"
