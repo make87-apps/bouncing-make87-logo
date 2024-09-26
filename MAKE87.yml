@@ -3,4 +3,4 @@ build_kit:
   version: latest
 outbound_topics:
   - name: SCREEN_CAPTURE
-    message_type: make87.image.ImageJPEG.ImageJPEG
+    message_type: make87_messages.image.compressed.image_jpeg.ImageJPEG

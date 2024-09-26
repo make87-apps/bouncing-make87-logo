@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 import pygame
 from make87 import get_topic, topic_names
-from make87_messages.image.ImageJPEG_pb2 import ImageJPEG
+from make87_messages.image.compressed.image_jpeg_pb2 import ImageJPEG
 
 
 def main():
