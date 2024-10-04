@@ -5,11 +5,12 @@ import random
 import cv2
 import numpy as np
 import pygame
-from make87 import get_topic, topic_names
+from make87 import initialize, get_topic, topic_names
 from make87_messages.image.compressed.image_jpeg_pb2 import ImageJPEG
 
 
 def main():
+    initialize()
     topic = get_topic(name=topic_names.SCREEN_CAPTURE)
 
     def encode_to_jpeg(frame: np.ndarray) -> np.ndarray:
