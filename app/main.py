@@ -5,14 +5,14 @@ import random
 import cv2
 import numpy as np
 import pygame
-from make87 import initialize, get_publisher_topic, resolve_topic_name
+from make87 import initialize, get_publisher, resolve_topic_name
 from make87_messages.image.compressed.image_jpeg_pb2 import ImageJPEG
 
 
 def main():
     initialize()
     topic_name = resolve_topic_name("SCREEN_CAPTURE")
-    topic = get_publisher_topic(name=topic_name, message_type=ImageJPEG)
+    topic = get_publisher(name=topic_name, message_type=ImageJPEG)
 
     def encode_to_jpeg(frame: np.ndarray) -> np.ndarray:
         _, encoded_image = cv2.imencode(".jpeg", frame)
