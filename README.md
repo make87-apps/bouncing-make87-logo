@@ -1,4 +1,4 @@
-# bouncing-make87-logo
+# Bouncing make87 Logo
 
 This application creates a dynamic animation of the "make87" logo that moves around a 1920x1080 window, bouncing off the
 edges and changing color on each bounce. The application is designed to demonstrate how real-time visual data can be

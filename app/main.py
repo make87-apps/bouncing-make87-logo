@@ -11,8 +11,7 @@ from make87_messages.image.compressed.image_jpeg_pb2 import ImageJPEG
 
 def main():
     initialize()
-    topic_name = resolve_topic_name("SCREEN_CAPTURE")
-    topic = get_publisher(name=topic_name, message_type=ImageJPEG)
+    topic = get_publisher(name="SCREEN_CAPTURE", message_type=ImageJPEG)
 
     def encode_to_jpeg(frame: np.ndarray) -> np.ndarray:
         _, encoded_image = cv2.imencode(".jpeg", frame)
@@ -21,7 +20,9 @@ def main():
     def publish_frame(frame: np.ndarray):
         jpeg = encode_to_jpeg(frame=frame)
 
-        message = ImageJPEG(data=jpeg.tobytes())
+        header = Header()
+        header.timestamp.GetCurrentTime()
+        message = ImageJPEG(header=header, data=jpeg.tobytes())
         topic.publish(message)
         logging.info(f"Published logo frame with size {len(jpeg)} bytes")
 
