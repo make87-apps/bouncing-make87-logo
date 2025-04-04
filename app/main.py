@@ -5,7 +5,8 @@ import random
 import cv2
 import numpy as np
 import pygame
-from make87 import initialize, get_publisher, resolve_topic_name
+from make87 import initialize, get_publisher
+from make87_messages.core.header_pb2 import Header
 from make87_messages.image.compressed.image_jpeg_pb2 import ImageJPEG
 
 
